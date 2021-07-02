@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Posts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Nombre"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "fecha_creacion": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "boolean"
+    },
+    "img_ppal": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "posts"
+    }
+  }
+}

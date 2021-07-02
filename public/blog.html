@@ -1,0 +1,34 @@
+<div>
+
+    <H2>the Blog</H2>
+    <div id="categories">
+        Writes categories
+    </div>
+</div>
+
+<script>
+    const displayCategories = async () =>{
+        const response = await fetch('http://localhost:1337/categorias');
+        const categorias = await response.json();
+        console.log("displayCategories categorias " , categorias);
+        
+        const container = document.querySelector("#categories");
+        categorias.forEach(categoria =>{
+            const image = document.createElement("img");
+            image.setAttribute("src","")
+            container.appendChild(image);
+
+            const title = document.createElement('h2');
+            title.innerHTML = categoria.Nombre
+            container.appendChild(title)
+        })
+
+
+    
+    }
+
+    displayCategories()
+</script>
+
+
+
