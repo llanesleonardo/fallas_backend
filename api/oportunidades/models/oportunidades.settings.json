@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oportunidades",
+  "info": {
+    "name": "oportunidades",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "consecutivo_oportunidades": {
+      "type": "integer"
+    },
+    "fecha_de_captura": {
+      "type": "datetime"
+    },
+    "foto_de_la_oportunidad": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "fecha_de_cierre_programado": {
+      "type": "datetime"
+    },
+    "fecha_de_cierre_real": {
+      "type": "datetime"
+    },
+    "foto_de_la_solucion": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "comentario_de_la_solucion": {
+      "type": "text"
+    },
+    "nombre_oportunidad": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre_oportunidad"
+    },
+    "surco": {
+      "type": "integer"
+    },
+    "numeroplanta": {
+      "type": "integer"
+    },
+    "campo": {
+      "model": "campo",
+      "via": "oportunidad"
+    },
+    "cuadro": {
+      "model": "cuadro",
+      "via": "oportunidad"
+    },
+    "variedad": {
+      "model": "variedad",
+      "via": "oportunidad"
+    },
+    "categoria": {
+      "model": "categoria",
+      "via": "oportunidad"
+    },
+    "notificacioncaptura": {
+      "collection": "colaboradores",
+      "via": "notificacion_captura"
+    },
+    "notificacionsolucion": {
+      "collection": "colaboradores",
+      "via": "notificacion_solucion"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "abierto",
+        "cerrado"
+      ]
+    }
+  }
+}

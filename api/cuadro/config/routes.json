@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cuadros",
+      "handler": "cuadro.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cuadros/count",
+      "handler": "cuadro.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cuadros/:id",
+      "handler": "cuadro.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cuadros",
+      "handler": "cuadro.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cuadros/:id",
+      "handler": "cuadro.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cuadros/:id",
+      "handler": "cuadro.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

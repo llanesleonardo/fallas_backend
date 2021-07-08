@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuadros",
+  "info": {
+    "name": "Cuadro",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_de_cuadro": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "oportunidad": {
+      "via": "cuadro",
+      "model": "oportunidades"
+    }
+  }
+}

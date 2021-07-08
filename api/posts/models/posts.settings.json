@@ -19,7 +19,7 @@
       "type": "uid",
       "targetField": "Nombre"
     },
-    "body": {
+    "descripcion": {
       "type": "richtext"
     },
     "fecha_creacion": {
@@ -42,6 +42,9 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "posts"
+    },
+    "likes": {
+      "type": "integer"
     }
   }
 }

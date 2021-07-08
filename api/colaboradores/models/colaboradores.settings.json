@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colaboradores",
+  "info": {
+    "name": "Colaboradores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "notificacion_captura": {
+      "via": "notificacioncaptura",
+      "model": "oportunidades"
+    },
+    "notificacion_solucion": {
+      "via": "notificacionsolucion",
+      "model": "oportunidades"
+    }
+  }
+}

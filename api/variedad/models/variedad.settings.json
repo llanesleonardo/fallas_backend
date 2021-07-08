@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variedads",
+  "info": {
+    "name": "variedad",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "oportunidad": {
+      "via": "variedad",
+      "model": "oportunidades"
+    }
+  }
+}

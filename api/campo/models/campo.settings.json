@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campos",
+  "info": {
+    "name": "campo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "oportunidad": {
+      "via": "campo",
+      "model": "oportunidades"
+    }
+  }
+}
